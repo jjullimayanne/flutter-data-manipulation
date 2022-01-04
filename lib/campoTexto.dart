@@ -23,9 +23,7 @@ class _CampoTextoState extends State<CampoTexto> {
               ///  ///keyboardType: TextInputType.emailAddress
               //keyboardType: TextInputType.datetime,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                labelText: "Digite um valor"
-              ),
+              decoration: InputDecoration(labelText: "Digite um valor"),
               //enabled: true,
               //maxLength: 2,
               ///maxLengthEnforced: false,
@@ -33,7 +31,14 @@ class _CampoTextoState extends State<CampoTexto> {
                 fontSize: 20,
                 color: Colors.redAccent,
               ),
-             /// obscureText: true,
+
+              /// obscureText: true,
+              /*
+             onChanged: (String texto ) => {
+               print('Valor digitado ' + texto)
+             },
+             */
+              onSubmitted: (String texto) => {print(texto)},
             ),
           ),
         ],
