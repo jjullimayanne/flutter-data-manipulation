@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 class CampoTexto extends StatefulWidget {
-  const CampoTexto({ Key? key }) : super(key: key);
+  const CampoTexto({Key? key}) : super(key: key);
 
   @override
   _CampoTextoState createState() => _CampoTextoState();
@@ -18,15 +19,25 @@ class _CampoTextoState extends State<CampoTexto> {
           Padding(
             padding: EdgeInsets.all(32),
             child: TextField(
-              keyboardType: TextInputType.text,
-
+              ///keyboardType: TextInputType.text,
+              ///  ///keyboardType: TextInputType.emailAddress
+              //keyboardType: TextInputType.datetime,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Digite um valor"
+              ),
+              //enabled: true,
+              //maxLength: 2,
+              ///maxLengthEnforced: false,
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.redAccent,
+              ),
+             /// obscureText: true,
             ),
-            ),
-
-
+          ),
         ],
       ),
-      
     );
   }
 }
