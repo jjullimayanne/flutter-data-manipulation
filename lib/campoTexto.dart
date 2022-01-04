@@ -8,6 +8,7 @@ class CampoTexto extends StatefulWidget {
 }
 
 class _CampoTextoState extends State<CampoTexto> {
+  TextEditingController _textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +40,18 @@ class _CampoTextoState extends State<CampoTexto> {
              },
              */
               onSubmitted: (String texto) => {print(texto)},
+              controller: _textEditingController,
             ),
           ),
+          ElevatedButton(
+            onPressed: () {
+              print(_textEditingController.text);
+            },
+            child: Text("Salvar"),
+            style: ElevatedButton.styleFrom(
+                primary: Colors.amber, onPrimary: Colors.black),
+                
+          )
         ],
       ),
     );
